@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerLook : MonoBehaviour
 {
-    public Transform player, parent;
+    public Transform player;
 
     public float sensitivity = 10;
 
@@ -27,7 +27,6 @@ public class PlayerLook : MonoBehaviour
         //rotation
         transform.localRotation = Quaternion.Euler(x, 0, 0);
         player.transform.localRotation = Quaternion.Euler(0, y, 0);
-        parent.transform.localRotation = Quaternion.Euler(0, y, 0);
 
         //cursorLocking
         if (Input.GetKeyDown(KeyCode.Escape))
